@@ -3,6 +3,7 @@ import Greetings from "./Greetings";
 import Counter from "./Counter";
 import MyForm from "./MyForm";
 import ReducerSample from "./ReducerSample";
+import { SampleProvider } from "./SampleContext";
 
 const App: React.FC = () => {
   const onClick = (name: string) => {
@@ -21,7 +22,9 @@ const App: React.FC = () => {
       <h1>마이폼 샘플</h1>
       <MyForm onSubmit={onSubmit} />
       <h1>리듀서 샘플</h1>
-      <ReducerSample />
+      <SampleProvider>
+        <ReducerSample />
+      </SampleProvider>
     </div>
   );
 };

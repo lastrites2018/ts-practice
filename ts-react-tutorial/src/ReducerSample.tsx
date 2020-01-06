@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import { useSampleState, useSampleDispatch } from "./SampleContext";
 
 type Color = "red" | "orange" | "yellow";
 
@@ -43,12 +44,18 @@ function reducer(state: State, action: Action): State {
 }
 
 function ReducerSample() {
-  const [state, dispatch] = useReducer(reducer, {
-    count: 0,
-    text: "hello",
-    color: "red",
-    isGood: true
-  });
+  // 컨테스트 사용하기 전
+
+  // const [state, dispatch] = useReducer(reducer, {
+  //   count: 0,
+  //   text: "hello",
+  //   color: "red",
+  //   isGood: true
+  // });
+
+  // 컨텍스트 사용한 후
+  const state = useSampleState();
+  const dispatch = useSampleDispatch();
 
   const setCount = () => dispatch({ type: "SET_COUNT", count: 5 });
   const setText = () => dispatch({ type: "SET_TEXT", text: "bye" });

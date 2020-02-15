@@ -3,11 +3,11 @@
 // 특정 타입에 별칭을 붙이는 용도
 // 배열, 객체 또는 어떤 타입이든 별칭을 지어줄 수 있다
 var 한사람 = {
-    name: "김사람"
+  name: "김사람"
 };
 var 전문가 = {
-    name: "김개발",
-    skills: ["javascript", "react"]
+  name: "김개발",
+  skills: ["javascript", "react"]
 };
 var 피플 = [한사람, 전문가];
 var 칼러 = "red";
